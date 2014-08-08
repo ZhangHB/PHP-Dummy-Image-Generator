@@ -1,6 +1,6 @@
-# PHP Dummy Image Generator
-## as seen on DummyImage.com
+# PHP 傀儡图创建器
+## 类似 DummyImage.com
 
-### Examples:
- * image.php?size=250x850&type=jpg&bg=ff8800&color=000000 <br>- will create a 250px width, 800px height jpg image with orange background and black text
- * image.php?size=250 <br>- will create a 250px width, 250px height png image with black background and white text
+### 例子:
+ * image.php?size=250x850&type=jpg&bg=ff8800&color=000000 <br>- 创建250像素宽，800像素高，橙色背景黑色文字的jpg图片
+ * image.php?size=250 <br>- 创建宽高都是250像素黑色背景白色文字，png格式的图片
