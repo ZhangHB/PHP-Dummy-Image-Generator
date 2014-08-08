@@ -17,24 +17,36 @@
  * @author Fabian Beiner <mail -at- fabian-beiner -dot- de)
  */
 
+
+
 // Handle the parameters.
 $strSize  = (($strSize = $_GET['size'])   ? strtolower($strSize)  : NULL);
-$strType  = (($strType = $_GET['type'])   ? strtolower($strType)  : 'png');
+//$strType  = (($strType = $_GET['type'])   ? strtolower($strType)  : 'png');
+
+$strType  = 'png';
+
 $strBg    = (($strBg = $_GET['bg'])       ? strtolower($strBg)    : '000000');
 $strColor = (($strColor = $_GET['color']) ? strtolower($strColor) : 'ffffff');
 
+
+
+
+// $strBg    = '000000';
+// $strColor = 'ffffff';
+
+
 // Now let's check the parameters.
 if ($strSize == NULL) {
-	die('<b>You have to provide the size of the image.</b> Example: 250x320.</b>');
+	die('<b>得提供个尺寸用来生成图片儿。</b> 比如： 250x320.</b>');
 }
 if ($strType != 'png' and $strType != 'gif' and $strType != 'jpg') {
-	die('<b>The selected type is wrong. You can chose between PNG, GIF or JPG.');
+	die('<b>图片格式写错了，只能是 PNG， GIF 或者 JPG。');
 }
 if (strlen($strBg) != 6 and strlen($strBg) != 3) {
-	die('<b>You have to provide the background color as hex.</b> Example: 000000 (for black).');
+	die('<b>得提供 16 进制的颜色值，</b> 比如： 000000 (用来显示黑色).');
 }
 if (strlen($strColor) != 6 and strlen($strColor) != 3) {
-	die('<b>You have to provide the font color as hex.</b> Example: ffffff (for white).');
+	die('<b>得提供 16 进制的颜色值，</b> 比如 ffffff (用来显示白色).');
 }
 
 // Get width and height from current size.
